@@ -11,7 +11,7 @@
             </div>
     </div>
 
-    <div class="description">
+    <div class="main">
         <div class="section">
          <div class="container tim-container">
             <div class="tim-title">
@@ -53,15 +53,15 @@
     <div class="section section-light-blue">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 text-center">
                     <div class="tim-title">
-                        <h3>Butuh Bantuan?</h3>
+                        <h3>Butuh Pengajuan Surat?</h3>
                     </div>
+                    <p>Bisa daftar terlebih dahulu dulu!!</p>
+                    <a href="{{ route('surat') }}" class="btn btn-fill btn-danger">Pengajuan Surat</a>
                 </div>
             </div>
         </div>
     </div>
-
-    @include('layouts.footer')
 </div>
 @endsection
