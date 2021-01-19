@@ -18,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/pengajuan-surat', 'HomeController@pengajuanSurat')->name('surat');
+Route::get('/contact', 'HomeController@contact')->name('contact');
+
+//Route::get('/admin', '')

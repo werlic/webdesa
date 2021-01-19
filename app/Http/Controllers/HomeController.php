@@ -12,4 +12,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function pengajuanSurat()
+    {
+        return view('pengajuan-surat');
+    }
+
+    public function contact()
+    {
+        return view('contact');
+    }
 }

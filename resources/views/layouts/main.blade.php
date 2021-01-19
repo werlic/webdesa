@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('body')
-<nav class="navbar navbar-ct-transparent" role="navigation-demo" id="demo-navbar">
+<nav class="navbar navbar-default" role="navigation-demo" id="demo-navbar">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -27,13 +27,13 @@
     <div class="collapse navbar-collapse" id="navigation-example-2">
       <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="#" class="btn btn-secondary btn-fill">Components</a>
+            <a href="{{ route('home') }}" class="btn btn-secondary btn-fill">Home</a>
           </li>
           <li>
-            <a href="#" class="btn btn-secondary btn-fill">Tutorial</a>
+            <a href="{{ route('surat') }}" class="btn btn-secondary btn-fill">Permohonan Surat</a>
           </li>
           <li>
-            <a href="/" target="_blank" class="btn btn-fill btn-default">Download</a>
+            <a href="{{ route('contact') }}" class="btn btn-fill btn-default">Contact</a>
           </li>
        </ul>
     </div><!-- /.navbar-collapse -->
@@ -42,5 +42,5 @@
 
 @yield('content')
 
-<!--    end modal -->
+@include('layouts.footer')
 @endsection
