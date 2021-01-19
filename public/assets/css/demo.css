@@ -225,7 +225,7 @@
     min-height: 92vh;
 }
 .demo-header-image{
-    background-image: url('../paper_img/city.jpg');
+    background-image: url('../../image/Desa.jpg');
 }
 .demo-header .motto{
     color: #FFFFFF;
