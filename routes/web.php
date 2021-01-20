@@ -24,4 +24,15 @@ Route::get('/contact', 'HomeController@contact')->name('contact');
 Auth::routes(['register' => false, 'confirm' => false]);
 Route::group(['prefix' => '/admins'], function() {
     Route::get('/', 'AdminController@index')->name('dashboard');
+    Route::get('/profile', 'AdminController@profile')->name('profile');
+    Route::post('/profile/update', 'AdminController@updateProfile')->name('profile.update');
+    Route::get('/changepass', 'AdminController@changePassword')->name('changepassword');
+    Route::post('/changepass/store', 'AdminController@storePassword')->name('password.store');
+    Route::group(['prefix' => 'pengajuan', 'as' => 'pengajuan'], function () {
+        Route::get('/', 'PengajuanController@index')->middleware('auth');
+        Route::post('/store', 'PengajuanController@store')->name('.store');
+        Route::get('/edit/{id}', 'PengajuanController@edit')->middleware('auth')->name('.edit');
+        Route::post('/update/{id}', 'PengajuanController@update')->middleware('auth')->name('.update');
+        Route::get('/delete/{id}', 'PengajuanController@destroy')->middleware('auth')->name('.delete');
+    });
 });

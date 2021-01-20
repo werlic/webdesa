@@ -57,7 +57,7 @@
                     <div class="tim-title">
                         <h3>Butuh Pengajuan Surat?</h3>
                     </div>
-                    <p>Bisa daftar terlebih dahulu dulu!!</p>
+                    <p>Bisa daftar dulu di sini!!</p>
                     <a href="{{ route('surat') }}" class="btn btn-fill btn-danger">Pengajuan Surat</a>
                 </div>
             </div>
