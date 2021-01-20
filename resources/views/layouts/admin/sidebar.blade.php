@@ -16,21 +16,21 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="active ">
-            <a href="./dashboard.html">
+            <a href="{{ route('dashboard') }}">
               <i class="nc-icon nc-bank"></i>
               <p>Dashboard</p>
             </a>
           </li>
           <li>
-            <a href="./icons.html">
-              <i class="nc-icon nc-diamond"></i>
-              <p>Icons</p>
+            <a href="{{ route('pengajuan') }}">
+              <i class="nc-icon nc-paper"></i>
+              <p>Pengajuan Surat</p>
             </a>
           </li>
           <li>
-            <a href="./map.html">
-              <i class="nc-icon nc-pin-3"></i>
-              <p>Maps</p>
+            <a href="{{ route('profile') }}">
+              <i class="nc-icon nc-single-02"></i>
+              <p>Profile</p>
             </a>
           </li>
         </ul>
