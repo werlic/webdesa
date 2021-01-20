@@ -1,27 +1,23 @@
 <footer class="footer-demo section-dark">
     <div class="container">
-        <nav class="pull-left">
+        <nav class="footer-nav pull-left">
             <ul>
-
                 <li>
-                    <a href="http://www.creative-tim.com">
-                        Creative Tim
+                    <a href="{{ url('/') }}">
+                        Web Desa
                     </a>
                 </li>
                 <li>
-                    <a href="http://blog.creative-tim.com">
-                       Blog
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.creative-tim.com/product/rubik">
-                        Licenses
+                    <a href="#">
+                        <i class="fa fa-home"></i>
                     </a>
                 </li>
             </ul>
         </nav>
         <div class="copyright pull-right">
-            &copy; 2015, made with <i class="fa fa-heart heart"></i> by Creative Tim
+            &copy; <script>
+                  document.write(new Date().getFullYear())
+                </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
         </div>
     </div>
 </footer>

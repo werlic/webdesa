@@ -21,4 +21,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/pengajuan-surat', 'HomeController@pengajuanSurat')->name('surat');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 
-//Route::get('/admin', '')
+Auth::routes(['register' => false, 'confirm' => false]);
+Route::group(['prefix' => '/admins'], function() {
+    Route::get('/', 'AdminController@index')->name('dashboard');
+});
