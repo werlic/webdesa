@@ -49,7 +49,7 @@ class PengajuanController extends Controller
 
         DB::beginTransaction();
         try {
-            Pengajuan::create([
+            $pengajuan = Pengajuan::create([
                 'nama' => $request->nama,
                 'nik' => $request->nik,
                 'jenis_surat' => $request->surat,
@@ -60,8 +60,8 @@ class PengajuanController extends Controller
             DB::rollback();
             return redirect('pengajuan-surat')->with('message-warning', 'Gagal mengirim formulir!!');
         }
-
-        return redirect('pengajuan-surat')->with('message-success', 'Pengajuan berhasil!!');
+        $id = $pengajuan->id;
+        return redirect()->route('surat.success', ['id' => $id])->with('message-success', 'Pengajuan berhasil!!');
     }
 
     /**
@@ -133,17 +133,12 @@ class PengajuanController extends Controller
         $pengajuan = Pengajuan::find($id);
         DB::beginTransaction();
         try {
-            $pengajuan->update([
-                'nama' => $request->nama,
-                'nik' => $request->nik,
-                'jenis_surat' => $request->surat,
-                'deskripsi' => $request->deskripsi
-            ]);
+            $pengajuan->delete();
             DB::commit();
         } catch (\Exception $e) {
             DB::rollback();
-            return redirect()->route('pengajuan')->with('message-warning', 'Gagal memperbarui data!!');
+            return redirect()->route('pengajuan')->with('message-warning', 'Gagal menghapus data!!');
         }
-        return redirect()->route('pengajuan')->with('message-success', 'Perbaruan data berhasil!!');
+        return redirect()->route('pengajuan')->with('message-success', 'Data berhasil dihapus!!');
     }
 }

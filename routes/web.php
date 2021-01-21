@@ -19,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/pengajuan-surat', 'HomeController@pengajuanSurat')->name('surat');
+Route::get('/pengajuan-surat/success/{id}', 'HomeController@cetak')->name('surat.success');
+Route::get('/pengajuan-surat/cetak/{id}', 'HomeController@cetakPengajuan')->name('surat.cetak');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 
 Auth::routes(['register' => false, 'confirm' => false]);
