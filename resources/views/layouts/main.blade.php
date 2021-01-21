@@ -13,11 +13,11 @@
       </button>
       <a href="http://www.creative-tim.com">
            <div class="logo-container">
-                <div class="logo">
+                {{-- <div class="logo">
                     <img src="{{ asset('assets') }}/paper_img/new_logo.png" alt="Desa Logo">
-                </div>
+                </div> --}}
                 <div class="brand">
-                    Desa
+                  <h3>Desa</h3>
                 </div>
             </div>
       </a>
@@ -27,13 +27,13 @@
     <div class="collapse navbar-collapse" id="navigation-example-2">
       <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="{{ route('home') }}" class="btn btn-secondary btn-fill">Home</a>
+            <a href="{{ route('home') }}" class="btn btn-link">Home</a>
           </li>
           <li>
-            <a href="{{ route('surat') }}" class="btn btn-secondary btn-fill">Permohonan Surat</a>
+            <a href="{{ route('surat') }}" class="btn btn-link">Permohonan Surat</a>
           </li>
           <li>
-            <a href="{{ route('contact') }}" class="btn btn-fill btn-default">Contact</a>
+            <a href="{{ route('contact') }}" class="btn btn-link">Contact</a>
           </li>
        </ul>
     </div><!-- /.navbar-collapse -->

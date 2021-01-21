@@ -1,11 +1,11 @@
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
-        <a href="{{ url('/') }}" class="simple-text logo-mini">
+        {{-- <a href="{{ url('/') }}" class="simple-text logo-mini">
           <div class="logo-image-small">
             <img src="{{ asset('admin') }}/assets/img/logo-small.png">
           </div>
           <!-- <p>CT</p> -->
-        </a>
+        </a> --}}
         <a href="{{ url('/') }}" class="simple-text logo-normal">
           Admin Desa
           <!-- <div class="logo-image-big">
